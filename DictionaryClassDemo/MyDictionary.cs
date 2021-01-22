@@ -68,5 +68,13 @@ namespace DictionaryClassDemo
             return Values[index];
         }
 
+        public TValue this[TKey key] // for access dictionary element by keys.
+        {
+            get
+            {
+                int index = Array.IndexOf(Keys, key);
+                return Values[index];
+            }
+        }
     }
 }

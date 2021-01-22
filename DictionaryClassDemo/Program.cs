@@ -18,6 +18,7 @@ namespace DictionaryClassDemo
             myDictionary.Add("İngiltere", "Londra");
             myDictionary.Add("Rusya", "Moskova");
 
+            Console.WriteLine("Almanya'nın başkenti: " + myDictionary["Almanya"]);
             Console.WriteLine("Sözlükte toplam " + myDictionary.Count() + " eleman var.");
             Console.WriteLine(myDictionary.GetValue("Rusya"));
             Console.WriteLine(myDictionary.GetKey("Ankara"));
