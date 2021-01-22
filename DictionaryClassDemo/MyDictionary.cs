@@ -8,26 +8,26 @@ namespace DictionaryClassDemo
 {
     class MyDictionary<TKey, TValue>
     {
-        TKey[] Keys;
-        TValue[] Values;
+        TKey[] Keys; // array that stores keys of dictionary
+        TValue[] Values; // array that stores values of dictionary
 
         public MyDictionary()
         {
-            Keys = new TKey[0];
+            Keys = new TKey[0]; // instance creation with 0 size
             Values = new TValue[0];
         }
         public void Add(TKey key, TValue value)
         {
             if (key == null)
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException(); // Exception occurs if key is null
             }
 
             for (int i = 0; i < Keys.Length; i++)
             {
                 if (Keys[i].Equals(key))
                 {
-                    throw new ArgumentException("Aynı anahtara sahip öğe zaten eklenmiş.");
+                    throw new ArgumentException("Aynı anahtara sahip öğe zaten eklenmiş."); // Keys are unique
                 }
             }
             TKey[] tempKey = Keys;
