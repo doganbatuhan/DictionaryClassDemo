@@ -23,7 +23,11 @@ namespace DictionaryClassDemo
             Console.WriteLine(myDictionary.GetValue("Rusya"));
             Console.WriteLine(myDictionary.GetKey("Ankara"));
 
-            Console.ReadLine();
+            myDictionary["Azerbaycan"] = "Bakü";
+
+            Console.WriteLine(myDictionary.GetValue("Türkiye"));
+
+            Console.ReadLine(); // for .NET Core, This line can be removed.
 
         }
     }

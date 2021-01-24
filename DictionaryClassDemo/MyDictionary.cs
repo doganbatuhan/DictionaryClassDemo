@@ -75,6 +75,20 @@ namespace DictionaryClassDemo
                 int index = Array.IndexOf(Keys, key);
                 return Values[index];
             }
+            set
+            {
+                int index = Array.IndexOf(Keys, key);
+
+                if (index >= 0)
+                {
+                    Values[index] = value;
+                }
+                else
+                {
+                    Add(key, value); // add items by index like dict[key] = value
+                }
+
+            }
         }
     }
 }
